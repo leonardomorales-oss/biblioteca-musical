@@ -1,48 +1,237 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: #f4f6f8;
+  color: #202630;
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 .header {
-  background-color: #222;
-  color: white;
+  padding: 2.5rem 1.25rem 2rem;
+  background: #222;
+  color: #fff;
   text-align: center;
-  padding: 30px;
 }
 
 .header h1 {
   margin: 0;
-}
-
-.song-list {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-.song {
-  background-color: white;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.song h2 {
-  margin-top: 0;
-  color: #222;
-}
-
-.song p {
-  color: #444;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
 }
 
 .header p {
-  margin: 8px 0 0;
-  color: #ddd;
+  margin: 0.65rem 0 0;
+  color: #e3e5e8;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #15202b;
+}
+
+.site-nav a {
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: #34485a;
+}
+
+.site-nav a[aria-current='page'] {
+  background: #ffdf8a;
+  color: #18212a;
+}
+
+.content-shell {
+  width: min(100% - 2rem, 960px);
+  margin-inline: auto;
+}
+
+.page-content {
+  flex: 1;
+  padding-block: 2.5rem 3rem;
+}
+
+.section-heading {
+  margin-bottom: 1.75rem;
+}
+
+.section-heading h2 {
+  margin: 0.15rem 0 0.5rem;
+  color: #202630;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  letter-spacing: normal;
+}
+
+.section-heading > p:last-child {
+  color: #495461;
+}
+
+.eyebrow {
+  color: #755018;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.search-form {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 34rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-form label,
+.form-field label {
+  color: #202630;
+  font-weight: 700;
+}
+
+.search-form input,
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid #737f8a;
+  border-radius: 0.45rem;
+  padding: 0.75rem 0.85rem;
+  background: #fff;
+  color: #202630;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+}
+
+.song {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  min-height: 8rem;
+  padding: 1rem;
+  border: 1px solid #dce1e5;
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(23 35 48 / 7%);
+}
+
+.song-cover {
+  display: block;
+  width: 6rem;
+  aspect-ratio: 1;
+  border-radius: 0.4rem;
+  object-fit: cover;
+}
+
+.song h3 {
+  margin: 0 0 0.5rem;
+  color: #202630;
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+
+.song p {
+  margin: 0.2rem 0;
+  color: #495461;
+  font-size: 0.92rem;
+}
+
+.song strong {
+  color: #202630;
+}
+
+.empty-state {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #202630;
+}
+
+.suggestion-page {
+  max-width: 760px;
+}
+
+.suggestion-form {
+  display: grid;
+  gap: 1.1rem;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid #dce1e5;
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(23 35 48 / 7%);
+}
+
+.form-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  justify-self: start;
+  border: 0;
+  border-radius: 0.45rem;
+  padding: 0.8rem 1.1rem;
+  background: #15202b;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.submit-button:hover {
+  background: #34485a;
+}
+
+.form-status {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 4px solid #23744a;
+  border-radius: 0.35rem;
+  background: #e9f5ed;
+  color: #173e2b;
+}
+
+.site-footer {
+  padding: 1.25rem 1rem;
+  background: #222;
+  color: #e3e5e8;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .site-nav {
+    gap: 0.25rem;
+  }
+
+  .site-nav a {
+    padding-inline: 0.65rem;
+  }
+
+  .song {
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .song-cover {
+    width: 5rem;
+  }
 }
