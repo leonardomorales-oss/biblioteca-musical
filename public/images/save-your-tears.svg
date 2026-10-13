@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img">
+  <defs>
+    <linearGradient id="sunset" x2="0" y2="1"><stop stop-color="#ffc66e"/><stop offset=".52" stop-color="#e77e80"/><stop offset="1" stop-color="#523d75"/></linearGradient>
+  </defs>
+  <rect width="320" height="320" fill="url(#sunset)"/>
+  <circle cx="160" cy="126" r="63" fill="#ffe2a1" opacity=".95"/>
+  <path d="M0 226c43-27 74 27 119 0s75 27 119 0 56 1 82 7v87H0Z" fill="#443861"/>
+  <path d="M0 263c45-21 75 20 120 0s75 20 120 0 54 0 80 5v52H0Z" fill="#262c49"/>
+  <path d="M45 176c18-19 36 19 54 0s36 19 54 0 36 19 54 0 36 19 54 0" fill="none" stroke="#fff1d2" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+</svg>
